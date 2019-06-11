@@ -1,27 +1,14 @@
-n=input()
-p=10**(len(n)-1)
-li={10000:"H",5000:"G",1000:"M",500:"D",100:"C",50:"L",10:"X",5:"V",1:"I"}
-for i in n:
-	j=int(i)
-	if(j<=3):
-		while(j>0):
-		    print(li[p], end="")
-		    j-=1
-	elif(j==4):
-		if(p==1000):
-			while(j>0):
-				print(li[p], end="")
-				j-=1
-		else:
-			print(li[p], end="")
-			print(li[p*5], end="")
-	elif(j<=8):
-	    j=j-5
-	    print(li[p*5], end="")
-	    while(j>0):
-	        print(li[p], end="")
-	        j-=1
-	elif(j==9):
-	    print(li[p], end="")
-	    print(li[p*10], end="")
-	p=p//10
+s=int(input())
+a=[1000,900,500,400,100,90,50,40,10,9,5,4,1]
+b=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+n=""
+i=0
+while(s>0):
+    while(s>=a[i]):
+        s-=a[i]
+        n+=b[i]
+    i+=1
+print(n)    
+    
+    
+    
