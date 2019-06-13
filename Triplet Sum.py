@@ -15,6 +15,7 @@ def triplets(a, b, c):
     count=0
     j=0
     k=0
+    # Index Of An Element Says How Many Are On Its Left
     for i in b:
         while(j<len(a) and a[j]<=i):
             j+=1
