@@ -1,7 +1,7 @@
 import operator
+from collections import OrderedDict 
 li=list(map(int,input().split()))
-li.sort()
-d={}
+d=OrderedDict()
 for i in li:
     if i not in d:
         d[i]=1
